@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRepoDomain", "MyRepoDomain\MyRepoDomain.csproj", "{D15A4B04-8BBC-46FE-964C-75B47A1BB305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRepoDomain", "MyRepoDomain\MyRepoDomain.csproj", "{D15A4B04-8BBC-46FE-964C-75B47A1BB305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRepoUtility", "MyRepoUtility\MyRepoUtility.csproj", "{866A7C91-8F2E-46F5-84EF-05EC9D4D0C5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRepoConsole", "MyRepoConsole\MyRepoConsole.csproj", "{47290846-D743-4397-9AE5-7A6BB68D661C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D15A4B04-8BBC-46FE-964C-75B47A1BB305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D15A4B04-8BBC-46FE-964C-75B47A1BB305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D15A4B04-8BBC-46FE-964C-75B47A1BB305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866A7C91-8F2E-46F5-84EF-05EC9D4D0C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866A7C91-8F2E-46F5-84EF-05EC9D4D0C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866A7C91-8F2E-46F5-84EF-05EC9D4D0C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866A7C91-8F2E-46F5-84EF-05EC9D4D0C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47290846-D743-4397-9AE5-7A6BB68D661C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47290846-D743-4397-9AE5-7A6BB68D661C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47290846-D743-4397-9AE5-7A6BB68D661C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47290846-D743-4397-9AE5-7A6BB68D661C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
