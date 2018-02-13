@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRepoUtility", "MyRepoUtil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRepoConsole", "MyRepoConsole\MyRepoConsole.csproj", "{47290846-D743-4397-9AE5-7A6BB68D661C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRepoWebCore", "MyRepoWebCore\MyRepoWebCore.csproj", "{F1B056B7-B30D-4D45-807C-C8E21A8D8382}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{47290846-D743-4397-9AE5-7A6BB68D661C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47290846-D743-4397-9AE5-7A6BB68D661C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47290846-D743-4397-9AE5-7A6BB68D661C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B056B7-B30D-4D45-807C-C8E21A8D8382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B056B7-B30D-4D45-807C-C8E21A8D8382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B056B7-B30D-4D45-807C-C8E21A8D8382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B056B7-B30D-4D45-807C-C8E21A8D8382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
