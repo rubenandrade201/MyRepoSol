@@ -9,20 +9,25 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>_Layout</title>
-    <link href='@Url.Content("~/dist/third/bootstrap.min.css")' rel="stylesheet" />
+    <link href='@Url.Content("~/dist/third/bootstrap.min.css")' rel="stylesheet" />        
+    <script src='@Url.Content("~/dist/third/jquery.min.js")'></script>
+    <script src='@Url.Content("~/dist/third/bootstrap.min.js")'></script>
+    <script src='@Url.Content("~/dist/third/knockout-latest.js")'></script>
 
     @RenderSection("PreCss", required: false);
     @RenderSection("PreJs", required: false);
 </head>
 <body>
-    @RenderBody()
-
-    @*<environment names="Development">
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+     
+         @*<environment names="Development">
         <script src="~/dist/main.js"></script>
     </environment>
     <environment names="Staging,Production">
         <script src="~/dist/main.js" asp-append-version="true"></script>
     </environment>*@
-    @RenderSection("PostJs", required: false);    
+         @RenderSection("PostJs", required: false) ;
 </body>
 </html>
