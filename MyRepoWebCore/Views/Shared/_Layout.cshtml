@@ -19,9 +19,17 @@
 </head>
 <body>
     <div class="container-fluid">
+        <ul>
+            <li><a href='@Url.Action("Index","Knockout")'>Knockout simple</a> </li>
+            <li><a href='@Url.Action("LoopSample","Knockout")'>Knockout loop</a> </li>
+            <li><a href='@Url.Action("DataSample","Knockout")'>Knockout Data</a> </li>
+        </ul>
+    </div>
+
+    <div class="container-fluid">
         @RenderBody()
     </div>
-     
+
          @*<environment names="Development">
         <script src="~/dist/main.js"></script>
     </environment>

@@ -3,25 +3,26 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Basic sample bindind</h2>
-<hr />
-<div class="row">
-    <div class="col-md-2">First Name:</div>
-    <div class="col-md-2"><input data-bind="value: firstName" /></div>@*Here it is importante the value inside ""*@
-    <div class="col-md-2">Second Name</div>
-    <div class="col-md-2"><input data-bind="value: secondName" /></div>@*Here it is importante the value inside ""*@
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <button data-bind="click: capitalNames">Capitalize</button>
+
+    <h2>Basic sample bindind</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-2">First Name:</div>
+        <div class="col-md-2"><input data-bind="value: firstName" /></div>@*Here it is importante the VALUE inside ""*@
+        <div class="col-md-2">Second Name</div>
+        <div class="col-md-2"><input data-bind="value: secondName" /></div>@*Here it is importante the VALUE inside ""*@
     </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        Hello Mr: 
-        <span data-bind="text:totalName"></span>                                            
+    <div class="row">
+        <div class="col-md-4">
+            <button data-bind="click: capitalNames">Capitalize</button>
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-md-4">
+            Hello Mr:
+            <span data-bind="text:totalName"></span>
+        </div>
+    </div>
 
 <script>
     function SimpleVm() {
@@ -32,14 +33,13 @@
         }, this);
 
 
-        this.capitalNames = function () {    //this function it is called by button click binding event        
+        this.capitalNames = function () {    //this function it is called by button click binding event
             var currentValueFirst = this.firstName();
             this.firstName(currentValueFirst.toUpperCase());
             var currentValueSecond = this.secondName();
             this.secondName(currentValueSecond.toUpperCase());
         };
-    }
-
+    }     
     ko.applyBindings(new SimpleVm());
 
 </script>

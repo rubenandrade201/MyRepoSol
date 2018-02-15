@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "DataSample";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Data sample</h2>
+<hr />
+<div class="row">
+    <div class="col-md-2">Input</div>
+    <div class="col-md-2 col-sm-1"><input data-bind="value: dataEntry" /></div>   
+</div>
+<div class="row">
+    <div class="col-md-2"><button data-bind="click: Agregar">Add</button></div>
+</div>
+<hr />
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Valor</td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: { data: currentData, as: 'location' }">                   
+            <tr><td data-bind="text: location.dataValue"></td></tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function dataSample() {
+        var self = this;
+        self.dataEntry = ko.observable("");
+        self.currentData = ko.observableArray([]);
+        self.Agregar = function () {
+            var _value = self.dataEntry();
+            $.ajax(
+                {
+                    url: "PostData",
+                    type: "post",
+                    data: { value: _value },
+                    success: function (rp) {                       
+                        if (rp) {
+                            self.dataEntry("");
+                            self.loadData();
+                        }
+                    }, error: function (er1, er2) {
+                        alert(er1 + er2);
+                    }
+                });
+        };        
+
+        self.loadData = function () {
+            $.getJSON("GetData", function (allData) {
+                $.each(allData, function (idx, ele) {
+                    self.currentData.push({ dataValue: ele });
+                });
+            }); 
+        }
+
+        self.loadData();
+       
+
+    }
+
+    ko.applyBindings(new dataSample());
+</script>
+
+
+
+
