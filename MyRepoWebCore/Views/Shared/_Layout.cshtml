@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <link href='@Url.Content("~/dist/third/bootstrap.min.css")' rel="stylesheet" />        
+    <script src='@Url.Content("~/dist/third/jquery.min.js")'></script>
+    <script src='@Url.Content("~/dist/third/bootstrap.min.js")'></script>
+    <script src='@Url.Content("~/dist/third/knockout-latest.js")'></script>
+
+    @RenderSection("PreCss", required: false);
+    @RenderSection("PreJs", required: false);
+</head>
+<body>
+    <div class="container-fluid">
+        <ul>
+            <li><a href='@Url.Action("Index","Knockout")'>Knockout simple</a> </li>
+            <li><a href='@Url.Action("LoopSample","Knockout")'>Knockout loop</a> </li>
+            <li><a href='@Url.Action("DataSample","Knockout")'>Knockout Data</a> </li>
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+
+         @*<environment names="Development">
+        <script src="~/dist/main.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/dist/main.js" asp-append-version="true"></script>
+    </environment>*@
+         @RenderSection("PostJs", required: false) ;
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "LoopSample";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Basic sample looping list</h2>
+<hr />
+<div class="row">
+    <div class="col-md-1 col-sm-1">Name</div>
+    <div class="col-md-2 col-sm-1"><input data-bind="value: valueName" /></div>
+
+    <div class="col-md-1 col-sm-1">Meal</div>
+    <div class="col-md-2 col-sm-1"><select class="form-control" data-bind="options: availableMeals, value:'Value', optionsText:'Name' " /></div>
+
+    <div class="col-md-1 col-sm-1">Price</div>
+    <div class="col-md-2 col-sm-1"><input data-bind="value: valuePrice" /></div>
+</div>
+<div class="row">
+    <div class="col-md-2"><button data-bind="click: Agregar">Add</button></div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>MealName</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    
+
+    <tbody data-bind="foreach: { data: sampleData, as: 'location' }">
+        @*Aqui el foreach para las colecciones*@
+    <tr>
+        <td data-bind="text: location.Name"></td>
+        <td data-bind="text: location.MealName"></td>
+        <td data-bind="text: $root.formatCurrency(location.Price())"></td>
+    </tr>
+</tbody>
+</table>
+<script>
+
+    /**
+
+    <td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select></td>
+
+     */
+
+    function loopVm() {
+        var self = this;//Esto es para los deferred
+
+        self.valueName = ko.observable("");
+        self.valueMealName = ko.observable("");
+        self.valuePrice = ko.observable("");
+        self.availableMeals = ko.observable([
+            { Name: "Hamburguer", Value: "1" },
+            { Name: "Chip", Value: "2" },
+            { Name: "Nothing", Value: "3" }
+        ]);;
+
+
+        self.sampleData = ko.observableArray([
+            { Name: ko.observable("Uno"), MealName: ko.observable("Hamburguer"), Price: ko.observable(300000) },
+            { Name: ko.observable("Dos"), MealName: ko.observable("Chip"), Price: ko.observable(100000000) },
+            { Name: ko.observable("Tres"), MealName: ko.observable("Nothing"), Price: ko.observable(300000000000) }
+        ]);
+
+        self.Agregar = function () {
+            debugger
+            var some = self.valueMealName();
+
+            if (self.valueName() != undefined && self.valueName() != "" &&
+                self.valueMealName() != undefined && self.valueMealName() != "" &&
+                self.valuePrice() != undefined && self.valuePrice() != "") {
+                self.sampleData.push({ Name: self.valueName(), MealName: self.valueMealName(), Price: self.valuePrice() });
+                self.valueName("");
+                self.valueMealName("");
+                self.valuePrice("");
+            }
+        }
+
+        self.formatCurrency = function (amount) {
+            debugger
+            if (!amount) {
+                return "";
+            }
+            amount += '';
+            x = amount.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+            return "$" + x1 + x2;
+        }
+    }
+
+
+
+    ko.applyBindings(new loopVm());
+
+</script>
+
+
