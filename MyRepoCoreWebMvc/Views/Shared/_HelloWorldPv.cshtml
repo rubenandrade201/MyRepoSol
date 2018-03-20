@@ -1,0 +1,23 @@
+﻿
+<input data-bind="value: value1" />
+<br />
+<input data-bind="value: value2" />
+<br />
+<div data-bind="text: value3"></div>
+<script>
+    var helloVm = function (default1, default2) {
+        this.value1 = ko.observable(default1);
+        this.value2 = ko.observable(default2);
+
+        this.value3 = ko.pureComputed(function () {
+            debugger
+            return "Hello " + this.value1() + " " + this.value2()
+
+        }, this);
+
+
+    }
+
+    ko.applyBindings(new helloVm("valor1", "valor2"));
+
+</script>

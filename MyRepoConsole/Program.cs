@@ -1,4 +1,6 @@
-﻿using MyRepoDomain;
+﻿
+//using MyRepoCodeFirst;
+using MyRepoDomain;
 using System;
 
 namespace MyRepoConsole
@@ -9,7 +11,9 @@ namespace MyRepoConsole
         {
             try
             {
-                TestCsv();
+                //TestCsv();
+                TestCodeFirst();
+
             }
             catch (global::System.Exception e)
             {
@@ -39,6 +43,14 @@ namespace MyRepoConsole
                     item.MyProperty5,
                     item.MyProperty6));
             }
+        }
+
+        public static void TestCodeFirst()
+        {
+            //var ctx = new TestContext();
+            //ctx.Users.Add
+            //ctx.Users   .Add(new User() { Name = "Ruben" });
+            //ctx.SaveChanges();
         }
     }
 }
