@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRepoDomain", "MyRepoDomain\MyRepoDomain.csproj", "{D15A4B04-8BBC-46FE-964C-75B47A1BB305}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRepoUtility", "MyRepoUtil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRepoConsole", "MyRepoConsole\MyRepoConsole.csproj", "{47290846-D743-4397-9AE5-7A6BB68D661C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRepoWebCore", "MyRepoWebCore\MyRepoWebCore.csproj", "{F1B056B7-B30D-4D45-807C-C8E21A8D8382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRepoWebCore", "MyRepoWebCore\MyRepoWebCore.csproj", "{F1B056B7-B30D-4D45-807C-C8E21A8D8382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRepoWebCoreMain", "MyRepoWebCoreMain\MyRepoWebCoreMain.csproj", "{DAFC7A44-D3D2-4EE1-8833-92C2FB4A2441}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F1B056B7-B30D-4D45-807C-C8E21A8D8382}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B056B7-B30D-4D45-807C-C8E21A8D8382}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B056B7-B30D-4D45-807C-C8E21A8D8382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAFC7A44-D3D2-4EE1-8833-92C2FB4A2441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFC7A44-D3D2-4EE1-8833-92C2FB4A2441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFC7A44-D3D2-4EE1-8833-92C2FB4A2441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFC7A44-D3D2-4EE1-8833-92C2FB4A2441}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
